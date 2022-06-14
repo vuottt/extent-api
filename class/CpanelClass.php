@@ -33,7 +33,8 @@
     }
 
 
-    Function newSession($nHost, $nUser, $nPass) { // Example details
+    
+    function newSession($nHost, $nUser, $nPass) {
         $ip = $nHost;
         $cp_user = $nUser;
         $cp_pwd = $nPass;
@@ -66,7 +67,7 @@
         return (isset($cpsess[1])) ? $cpsess[1] : "";
     }
 
-    Function fixData($data) {
+    function fixData($data) {
         $data = str_replace("-","%2D",$data);
         $data = str_replace(".","%2E",$data);
         $data = str_replace(" ","%20",$data);
@@ -74,7 +75,7 @@
         return $data;
     }
 
-    Function returnData($data) {
+    function returnData($data) {
         $data = str_replace("%2D","-",$data);
         $data = str_replace("%2E",".",$data);
         $data = str_replace("%20"," ",$data);
