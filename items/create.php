@@ -16,7 +16,7 @@ include_once '../class/CpanelItems.php';
 // $items = new Items($db);
  
 $data = json_decode(file_get_contents("php://input"));
-print_r($data);
+
 // if(!empty($data->name) && !empty($data->description) &&
 // !empty($data->price) && !empty($data->category_id) &&
 // !empty($data->created)){    
@@ -38,17 +38,17 @@ print_r($data);
 //     http_response_code(400);    
 //     echo json_encode(array("message" => "Unable to create item. Data is incomplete."));
 // }
-if(!empty($data->newDomain) && !empty($data->newUser) && !empty($data->newPass) && !empty($data->newPlan) && !empty($data->newEmail)) {
+// if(!empty($data->newDomain) && !empty($data->newUser) && !empty($data->newPass) && !empty($data->newPlan) && !empty($data->newEmail)) {
 
-    $domain = $data->newDomain;
-    $user = $data->newUser;
-    $pasword = $data->newPass;
-    $plan = $data->newPlan;
-    $email = $data->newEmail;
-    createAccount ($newDomain = "$domain", $newUser = "$user", $newPass = "$pasword", $newPlan = "$plan", $newEmail = "$email");
-}
-else{    
-    http_response_code(400);    
-    echo json_encode(array("message" => "Unable to create item. Data is incomplete."));
-}
+//     $domain = $data->newDomain;
+//     $user = $data->newUser;
+//     $pasword = $data->newPass;
+//     $plan = $data->newPlan;
+//     $email = $data->newEmail;
+//     createAccount ($newDomain = "$domain", $newUser = "$user", $newPass = "$pasword", $newPlan = "$plan", $newEmail = "$email");
+// }
+// else{    
+//     http_response_code(400);    
+//     echo json_encode(array("message" => "Unable to create item. Data is incomplete."));
+// }
 ?>
