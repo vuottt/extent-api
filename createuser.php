@@ -6,7 +6,7 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 $whm_user   = "vuottt";      
-$whm_pass   = "vinahost@888"; 
+$whm_pass   = ""; 
 // Lay data
 
 $json = file_get_contents('php://input');
